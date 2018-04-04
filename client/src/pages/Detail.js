@@ -9,10 +9,7 @@ import TakeMoney from "../components/StripeButton";
 
 class Detail extends Component {
   state = {
-    // providers,
     provider: []
-    // provider: providers.filter(provider => provider.id == this.props.match.params.id)[0]
-    
   };
 
   // When this component mounts, grab the book with the _id of this.props.match.params.id
@@ -34,49 +31,46 @@ class Detail extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1>
-                More  about {this.state.provider.name} : 
-                <p>Kids:  {this.state.provider.kids}</p>
-                <p>Job:  {this.state.provider.occupation}</p>
-                <p>Hobbies:  {this.state.provider.interests}</p>
-              </h1>
+              <h1 className="text-center">Provider Info</h1>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
+          <Col size="md-12">
+            <h1 className="text-center">
+                More  about {this.state.provider.name} : 
+                <p>Kids:  {this.state.provider.kids}</p>
+                <p>Job:  {this.state.provider.occupation}</p>
+                <p>Hobbies:  {this.state.provider.interests}</p>
+            </h1>
             <article>
-              <p>
+              <p className="text-center">
                {this.state.provider.location}
-               
               </p>
             </article>
           </Col>
         </Row>
-          <Row>
+        <Row>
           <Col size="md-12">
               <p className="text-center">_____________________________</p>
-              <p className="text-center"> Kidly values the privacy
+              <p className="text-center" style={{ fontSize: 16 }}>Kidly values the privacy
               of our clients. We don't personally collect any credit information; we leave that
-              to a secure third party service.
+              to a secure third party service.</p>
+              <p className="text-center" style={{ fontSize: 16 }}> Please click the 'Pay With Card' button to make a one-time payment to access the Kidly services. </p>
+              <p className="text-center">
+                <Link to={"/login/" + this.props.match.params.id} className="text-center">
+                <TakeMoney
+                />
+                </Link>
               </p>
-              <p className="text-center"> Please click the 'Pay With Card' button to make a one-time payment to access the Kidly services. </p>
           </Col>
         </Row>
-        <Row className="text-center">
-          <Col size="md-12" className="text-center">
-            <Link to={"/login/" + this.props.match.params.id} className="text-center">
-            <TakeMoney
-            className="text-center"
-            />
-            </Link>
-          </Col>
-        </Row>
-
         <Row>
-          <Col size="md-2">
-            <Link to="/discover" >← Back to Discover</Link>
-          </Col>
+          <div style={{ marginTop: "100px" }}>
+            <Col size="md-12">
+              <Link to="/discover">← Back to Discover</Link>
+            </Col>
+          </div>
         </Row>
       </Container>
       </div>

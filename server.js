@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const session = require("express-session");
 const mongoose = require("mongoose");
-// const passport = require("./config/passport");
 const app = express();
 const bodyParser = require("body-parser");
 const logger = require("morgan");
@@ -27,11 +26,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use(routes);
-
-// We need to use sessions to keep track of our user's login status
-// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB

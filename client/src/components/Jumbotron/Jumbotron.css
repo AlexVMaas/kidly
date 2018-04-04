@@ -1,5 +1,9 @@
 div.jumbotron {
 	background-color: darkgrey;
-	color: white;
-	border: 2px solid grey;
+	color: darkgreen;
+	height: 200px;
+	background-image: url('/images/green-leaves.jpg');
+	background-repeat: round;
+	margin-left: 7%;
+	margin-right: 7%;
 }

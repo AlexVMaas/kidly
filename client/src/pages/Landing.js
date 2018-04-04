@@ -9,7 +9,6 @@ import GoogleLogin from 'react-google-login';
 
 class Landing extends React.Component {
 
-    // super(props);
     state={
         redirectToReferrerG: false,
         redirectToReferrerF: false,
@@ -17,7 +16,6 @@ class Landing extends React.Component {
         email: "",
         img: ""
     };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
     render() {
 
 const route = () => {
@@ -41,7 +39,6 @@ this.setState({redirectToReferrerF:true});
     const responseGoogle = (response) => {
     this.setState({redirectToReferrerG:true});
    
-      // console.log(response);
 
       if(this.state.redirectToReferrerG){
         this.setState({redirectToReferrerG:false});
@@ -60,8 +57,8 @@ return (
     <Hero>
       <h1>Kidly</h1>
       <h2>Families taking care of families.</h2>
-      <GoogleLogin style= {{ backgroundColor: "green", color: "white", borderRadius: 50}}
-          clientId="282281420844-o33h199b158o9qfh6mf5kvh7d86mt1ad.apps.googleusercontent.com"
+      <GoogleLogin style= {{ backgroundColor: "white", color: "green", borderRadius: 10, padding: 10, border: "2px solid darkgreen" }}
+          clientId="412522324881-o4l3km47q5q0589c97p9emlfek03j2r7.apps.googleusercontent.com"
           buttonText="Login with Google"
           onSuccess={responseGoogle}
           onFailure={responseGoogle2}
@@ -70,7 +67,7 @@ return (
       <img src="images/kinder-logo.PNG" style={{ borderRadius: 50, marginTop: 10 }} />
       </Col>
     </Hero>
-    <Container style={{ marginTop: 30 }}>
+    <Container style={{ marginTop: 70 }}>
       <Row>
         <Col size="md-12" className="text-center" style={{ color: "green" }}>
           <p>Welcome to Kidly. Our mission is to bring affordable child care to families in need; We believe

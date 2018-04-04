@@ -59,10 +59,10 @@ class Signup extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12" className="text-center">
-            <Jumbotron>
+            <Jumbotron style={{ marginLeft: "10%" }}>
               <h1>Please Sign Up</h1>
             </Jumbotron>
-            <form style={{ marginLeft: "20%", marginRight: "20%" }}>
+            <form style={{ marginLeft: "25%", marginRight: "25%" }}>
               <Input
                 value={this.state.id}
                 onChange={this.handleInputChange}
@@ -133,21 +133,3 @@ class Signup extends Component {
 
 export default Signup;
 
-// <Row>
-//           <Col size="md-12">
-//               <p className="text-center">_____________________________</p>
-//               <p className="text-center"> Kidly values the privacy
-//               of our clients. We don't personally collect any credit information; we leave that
-//               to a secure third party service.
-//               </p>
-//               <p className="text-center"> Please click the 'Pay With Card' button to make a one-time payment to access the Kidly services. </p>
-//           </Col>
-//         </Row>
-//         <Row>
-//           <Col size="md-12">
-//             <Link to="/login" style={{ float: "right", marginRight: "20%"}}>
-//             <TakeMoney
-//             />
-//             </Link>
-//           </Col>
-//         </Row>

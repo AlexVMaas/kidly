@@ -22,13 +22,4 @@ export default {
     return axios.get("/api/user/" + id);
   }
 
-  // login: function(loginData) {
-  //   return axios.post("/api/login", loginData);
-  // },
-
-  // logout: function(loginData) {
-  //   return axios.post("/api/login", loginData);
-  // }
-
-//login route for passport
 };

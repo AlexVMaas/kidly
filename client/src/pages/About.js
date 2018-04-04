@@ -10,7 +10,6 @@ import Navbar from "../components/Navbar";
 
 class About extends React.Component {
 
-    // super(props);
     state={
         redirectToReferrerG: false,
         redirectToReferrerF: false,
@@ -18,50 +17,48 @@ class About extends React.Component {
         email: "",
         img: ""
     };
-  // When this component mounts, grab the book with the _id of this.props.match.params.id
     render() {
 
-const route = () => {
- 
-    window.location = "/Discover";
-
-};
-    const responseFacebook = (response) => {
-        
-
-        if(!this.state.redirectToReferrerF){
-        this.setState({redirectToReferrerF:false});
-       
-      }
-this.setState({redirectToReferrerF:true});
-      if(this.state.redirectToReferrerF){
-        this.setState({redirectToReferrerF:false});
-        route();
-      }
-    };
-    const responseGoogle = (response) => {
-    this.setState({redirectToReferrerG:true});
+  const route = () => {
    
-      // console.log(response);
+      window.location = "/Discover";
 
-      if(this.state.redirectToReferrerG){
-        this.setState({redirectToReferrerG:false});
-        route();
-      }
+  };
+      const responseFacebook = (response) => {
+          
+
+          if(!this.state.redirectToReferrerF){
+          this.setState({redirectToReferrerF:false});
+         
+        }
+  this.setState({redirectToReferrerF:true});
+        if(this.state.redirectToReferrerF){
+          this.setState({redirectToReferrerF:false});
+          route();
+        }
+      };
+      const responseGoogle = (response) => {
+      this.setState({redirectToReferrerG:true});
+     
+
+        if(this.state.redirectToReferrerG){
+          this.setState({redirectToReferrerG:false});
+          route();
+        }
+        
+      };
+      const responseGoogle2 = (response) => {
+          this.setState({redirectToReferrerG:false});
+      console.log("404 Error Not Logged In");
       
-    };
-    const responseGoogle2 = (response) => {
-        this.setState({redirectToReferrerG:false});
-    console.log("404 Error Not Logged In");
-      
-    };
+};
 
 return (
   <div>
     <Navbar />
     <Hero>
       <h1>Kidly</h1>
-      <h2>Families taking care of families.</h2>  
+      <h2>Families taking care of families.</h2> 
       <Col size="md-12">
       <img src="images/kinder-logo.PNG" style={{ borderRadius: 50, marginTop: 10 }} />
       </Col>
@@ -78,8 +75,8 @@ return (
       </Row>
     </Container>
   </div>
-);
-}
+    );
+  }
 }
 
 export default About;
