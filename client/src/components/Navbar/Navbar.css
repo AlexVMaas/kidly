@@ -1,0 +1,16 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+a {
+	color: darkgreen;
+}
+a:hover {
+	text-decoration: none;
+	color: lightgreen;
+}
+.navbar-brand {
+	font-family: 'Courgette', cursive;
+}
+body {
+	font-family: 'Dosis', sans-serif;
+}

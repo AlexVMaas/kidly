@@ -1,0 +1,33 @@
+[ 
+  { 
+    "id": "Fred", 
+    "name": "Fred Rogers",
+    "image": "/images/dadwithtwokids.jpg",
+    "occupation": "Test occupation",
+    "location": "Denver",
+    "kids": "2",
+    "interests": "camping, cooking, sweaters, singing",
+    "email": "Fred@gmail.com"
+  },
+  { 
+    "id": "Lorelei", 
+    "name": "Lorelei Gilmore",
+    "image": "/images/momanddaughter.jpg",
+    "occupation": "Fashion Designer",
+    "location": "global",
+    "kids": "1",
+    "interests": "Travel, reading, arts",
+    "email": "Lorelei@yahoo.com"
+  },
+  { 
+    "id": "Matt and Kim", 
+    "name": "Matt and Kim Jansport",
+    "image": "/images/familyoffour.jpg",
+    "occupation": "trustafarians",
+    "location": "Denver",
+    "kids": "2",
+    "interests": "family adventures, travel, camping",
+    "email": "MnK@totsadorbs.com"
+ }
+]
+
