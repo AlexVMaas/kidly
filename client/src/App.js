@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Detail from "./pages/Detail";
 // import providers from "./providers.json";
@@ -23,7 +23,6 @@ const App = () => (
         <Route exact path="/discover/:id" component={Detail} />
         <Route exact path="/login/:id" component={Login} />
       </Wrapper>
-      <Footer />
     </div>
   </Router>
 );
